@@ -37,6 +37,7 @@ function Home() {
   const setLocalStorage = value => {
     try {
         window.localStorage.setItem('offset', JSON.stringify(value))
+        setOffset(value)
     } catch (error) {
       console.error(error)
     }

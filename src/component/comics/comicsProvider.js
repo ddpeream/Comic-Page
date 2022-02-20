@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import ListComics from './components/list/ListComics'
 import GridComics from './components/Grid/GridComics'
 import Loader from './components/Loader';
+import { ConatinerLoader } from './comics.style';
 
 export default function ComicsProvaider (props) {
 
@@ -31,15 +32,19 @@ export default function ComicsProvaider (props) {
     //console.log('OFFSET: ', offset); 
     //console.log('LIMIT: ', limit);
     //console.log('COMICS', comics);
-    //console.log('ES TRUE: ', isTrue);
+    //console.log('OBJECT_WINDOWS: ', window);
+    //console.log('DOCUMENT: ', document);
+    //console.log('NAVIGATOR: ', navigator);
+    //console.log('CONSOLE: ', console);
+
 
     if(loading===true){
         return (
-            <div>
+            <ConatinerLoader>
                 <Loader />
                 <Loader />
                 <Loader />
-            </div>
+            </ConatinerLoader>
         )
     }
 
